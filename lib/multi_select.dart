@@ -1,6 +1,6 @@
-import 'package:flutter/foundation.dart';
+import 'package:meta/meta.dart';
 
-import 'package:multi_selection/item_model.dart';
+import 'item_model.dart';
 
 /// Represents Item model in gridview
 class MultiSelectItem {

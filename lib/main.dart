@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
-import 'package:multi_selection/item_model.dart';
-import 'package:multi_selection/selection_list_builder.dart';
+import 'package:flutter/material.dart';
+
+import 'item_model.dart';
+import 'selection_list_builder.dart';
 import 'multi_select.dart';
 
 void main() {
