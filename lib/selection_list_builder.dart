@@ -6,7 +6,7 @@ import 'multi_select.dart';
 
 class SelectionListBuilder extends StatelessWidget {
   final List<MultiSelectItem> items;
-  final List<MultiSelectItem> selectedItems = [];
+  List<MultiSelectItem> selectedItems = [];
 
   SelectionListBuilder({@required this.items});
 
@@ -49,8 +49,9 @@ class SelectionListBuilder extends StatelessWidget {
                     ),
                     RaisedButton(
                       onPressed: () {
-                        selectedItems
-                            .addAll(items.where((element) => element.selected));
+                        selectedItems = state.items
+                            .where((element) => element.selected)
+                            .toList();
                         selectedItems.forEach((item) => print(item.item.title));
                       },
                       child: const Text('Print Selected Items'),
