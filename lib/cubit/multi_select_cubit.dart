@@ -7,7 +7,6 @@ part 'multi_select_state.dart';
 
 class MultiSelectCubit extends Cubit<MultiSelectState> {
   final List<MultiSelectItem> items;
-  List<MultiSelectItem> selectedItems = [];
 
   MultiSelectCubit({@required this.items})
       : super(MultiSelectState(items: items));
@@ -19,6 +18,5 @@ class MultiSelectCubit extends Cubit<MultiSelectState> {
           : item;
     }).toList();
     emit(state.copyWith(items: updatedItems));
-    selectedItems = state.items.where((item) => item.selected).toList();
   }
 }
